@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>spl-it</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='w3.css')}}">
+<body>
+
+    <div class="w3-container w3-display-middle">
+        <div class="w3-card-4">
+            <div class="w3-container w3-teal">
+                <h2>Input Form</h2>
+            </div>
+
+            <form class="w3-container" method="POST">
+                <p>
+                    <label>Number of people</label>
+                    <input class="w3-input" name="people" type="text" placeholder="Enter number of people">
+                </p>
+                <p>
+                    <label>Number of items</label>
+                    <input class="w3-input" name="items" type="text" placeholder="Enter number of items">
+                </p>
+                <center><button class="w3-btn w3-teal w3-margin">Next</button></center>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

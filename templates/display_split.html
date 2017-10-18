@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>spl-it</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='w3.css')}}">
+<body>
+
+    <div class="w3-container w3-display-middle w3-padding">
+        <div class="w3-card-4">
+            <div class="w3-container w3-teal">
+                <h2>Spl-It</h2>
+            </div>
+            {% for person in split.keys() %}
+                <div class="w3-container w3-margin w3-padding w3-border w3-light-gray">
+                    <center><bold>{{person}}</bold></center>
+                    {% for pair in split[person] %}
+                        {% for key in pair %}
+                            {% if pair[key]>0 %}
+                                Give {{pair[key]}} to {{key}}
+                                <br>
+                            {% else %}
+                                Get {{0-pair[key]}} from {{key}}
+                                <br>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <br>
+
+        </div>
+    </div>
+
+</body>
+</html>
